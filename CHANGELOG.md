@@ -1,4 +1,4 @@
-# Changelog Oganesson
+# Changelog PinEntryView
 
-## v1.2.0 (01-10-2019)
+## v1.0.0 (31-10-2019)
 - Initial release
