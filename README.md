@@ -14,7 +14,7 @@ Entering PIN codes made easy
 Podfile:
 
 ```ruby
-pod 'PinEntryView'
+pod 'PinEntryView', :git => 'https://github.com/e-sites/PinEntryView.git'
 ```
 
 And then
