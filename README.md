@@ -1,87 +1,88 @@
-![Oganesson](Assets/Logo.png)
+# PinEntryView
 
-Oganesson is part of the **[E-sites iOS Suite](https://github.com/e-sites/iOS-Suite)**.
+Entering PIN codes made easy
 
----
-
-A small swift helper class for using an ObjectPool
-
-[![forthebadge](http://forthebadge.com/images/badges/made-with-swift.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/built-with-swag.svg)](http://forthebadge.com)
-
-[![Platform](https://img.shields.io/cocoapods/p/Oganesson.svg?style=flat)](http://cocoadocs.org/docsets/Oganesson)
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Oganesson.svg)](https://cocoapods.org/pods/Oganesson)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Travis-ci](https://travis-ci.com/e-sites/Oganesson.svg?branch=master)](https://travis-ci.com/e-sites/Oganesson)
-
-Compatible with:
-
-- Swift 5
-- Xcode 11
+[![Platform](https://img.shields.io/cocoapods/p/PinEntryView.svg?style=flat)](http://cocoadocs.org/docsets/PinEntryView)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/PinEntryView.svg)](http://cocoadocs.org/docsets/PinEntryView)
+[![Travis-ci](https://travis-ci.org/e-sites/PinEntryView.svg?branch=master&001)](https://travis-ci.org/e-sites/PinEntryView)
 
 
 ## Installation
 
 ### CocoaPods
+
+Podfile:
+
 ```ruby
-pod 'Oganesson'
+pod 'PinEntryView'
+```
+
+And then
+
+```
+pod install
 ```
 
 ### SwiftPM
 
+Add the following line to your dependencies:
+
 ```swift
- .package(url: "https://github.com/e-sites/Oganesson", .branch("master"))
+.package(url: "https://github.com/e-sites/PinEntryView.git", .upToNextMajor(from: "1.0.0"))
 ```
 
-## Usage
-### Init
+
+## Implementation
+
+You can either add your `PinEntryView` to a XIB or storyboard or you can add it programatically:
+
 ```swift
-class SomeView: UIView, ObjectPoolCompatible {
-    required convenience init() {
-        self.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100)
+import PinEntryType
+import UIKit
+
+let entryView = PinEntryView(frame: CGRect(x: 10, y: 10, width: 300, height: 64))
+entryView.sizeBehavior = .fixedWidth(64) // This will make all the entries equal sized
+entryView.digits = 5 // 5 digit pin code
+entryView.viewType = EntryView.self // it must enherit from PinEntryViewType and UIView
+view.addSubview(entryView)
+```
+
+Make your own entry view item:
+
+```swift
+import UIKit
+
+class EntryView: UILabel, PinEntryViewType {
+	var digitValue: Int? {
+        didSet {
+            text = digitValue == nil ? nil : "*" // Place a * when the digit is entered
+        }
+    }
+
+     convenience required init() {
+        self.init(frame: CGRect.zero)
+        layer.borderColor = UIColor.orange.cgColor
+        backgroundColor = UIColor.darkGray
+        textAlignment = .center
+        textColor = UIColor.white
+        font = UIFont.systemFont(ofSize: 30, weight: .semibold)
+    }
+
+    override public func becomeFirstResponder() -> Bool {
+        layer.borderWidth = 2 // When the item is active, show the border
+        return true
+    }
+
+    override public func resignFirstResponder() -> Bool {
+        layer.borderWidth = 0 // When the item is inactive, hide the border
+        return true
     }
 }
 
-var objectPool: ObjectPool<SomeView>!
-
-override func viewDidLoad() {
-   super.viewDidLoad()
-    
-   objectPool = ObjectPool<SomeView>(size: 20, policy: .dynamic) { obj in
-       obj.backgroundColor = UIColor.red
-   }
-   
-   objectPool.onAcquire { [view] obj in 
-       DispatchQueue.main.async {
-          view.addSubview(obj)
-       }
-   }
-   
-   objectPool.onRelease { obj in 
-       DispatchQueue.main.async {
-           // It's safe to remove the object from its superview,
-           // since `ObjectPool` will keep its (memory) retained.
-           obj.removeFromSuperview()
-      }
-   }
-}
 ```
 
-### Get an object from the pool:
+if you want to access the pincode:
+
 ```swift
-do {
-    let object = try objectPool.acquire()
-    object.backgroundColor = UIColor.orange
-} catch let error {
-    print("Error acquiring object: \(error)")
-}
+entryView.value // will return a string (e.g. "12345")
 ```
-
-### Done using the object:
-```swift
-objectPool.release(object)
-```
-
-### Policies
-
-- `dynamic`: If the pool is drained, fill up the pool with +1
-- `static `: The pool size is fixed. If the pool is drained, throw `Error.drained`
