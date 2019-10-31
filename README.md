@@ -3,7 +3,6 @@
 Entering PIN codes made easy
 
 [![Platform](https://img.shields.io/cocoapods/p/PinEntryView.svg?style=flat)](http://cocoadocs.org/docsets/PinEntryView)
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/PinEntryView.svg)](http://cocoadocs.org/docsets/PinEntryView)
 [![Travis-ci](https://travis-ci.org/e-sites/PinEntryView.svg?branch=master&001)](https://travis-ci.org/e-sites/PinEntryView)
 
 
