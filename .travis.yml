@@ -1,0 +1,9 @@
+language: objective-c
+osx_image: xcode11
+
+branches:
+  only:
+  - master
+
+script:
+  - xcodebuild -project PinEntryView.xcodeproj -scheme PinEntryView -configuration Debug -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11 Pro' build
