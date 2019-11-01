@@ -85,14 +85,14 @@ class EntryView: UILabel, PinFieldViewable {
 
 ### Variables
 
-|Variable|Distinction|Description|
-|----|----|-------|
-|`value: String`|`get`|Returns the typed pincode (e.g. "12345")|
-|`views: [PinEntryTypeUIView]`|`get`|The current entry item views, so you can use them as you like|
-|`isFilled: Bool`|`get`|Are all the entry fields filled in?|
-|`sizeBehavior: SizeBehavior`|`get, set`|[See size behavior](#sizebehavior) (Default: `.spacing(10)`|
-|`digits: Int`|`get, set`|The number of digits (Default: 4, Min: 1, Max: 10)|
-|`viewType: PinEntryTypeUIView.Type`|`get, set`|[See view types](#viewtype) (Default: `DefaultEntryType.self`)|
+|Variable|Type|Description|
+|----|---|----|
+|`value`|`String`|(Readonly) Returns the typed pincode (e.g. "12345")|
+|`views`|`[PinFieldUIView]`|(Readonly) The current entry item views, so you can use them as you like|
+|`isFilled`|`Bool`|(Readonly) Are all the entry fields filled in?|
+|`digits`|`Int`|The number of digits (Default: 4, Min: 1, Max: 10)|
+|`sizeBehavior`|`SizeBehavior`|[See size behavior](#sizebehavior) (Default: `.spacing(10)`|
+|`viewType`|`PinFieldUIView.Type`|[See view types](#viewtype) (Default: `DefaultEntryType.self`)|
 
 
 ### Functions
@@ -115,7 +115,7 @@ There are two options when it comes to the size of the digit views:
 ### View types
 
 This is probably the most important part of this class, a view type will define how the individual digits entry fields will look like.   
-Create a new class that extends `UIView` and implements the `PinEntryViewType` protocol.
+Create a new class that extends `UIView` and implements the `PinFieldViewable` protocol.
 
 Within that class there are 3 important things you need to take care of
 
@@ -143,7 +143,7 @@ override public func resignFirstResponder() -> Bool {
 
 #### 3. When the users enters (or removes) a digit
 
-That is where the `PinEntryViewType` protocol comes in place, we need to implement `var digitValue: Int?`, so this view knows what digit the user entered. In this particular example the background will turn green once a number is entered, otherwise (defaults) to white.
+That is where the `PinFieldViewable` protocol comes in place, we need to implement `var digitValue: Int?`, so this view knows what digit the user entered. In this particular example the background will turn green once a number is entered, otherwise (defaults) to white.
 
 ```swift
 var digitValue: Int? {
@@ -158,9 +158,9 @@ Above code will result in something like this:
 ```swift
 import Foundation
 import UIKit
-import PinEntryView
+import PinFieldView
 
-public class DigitEntryView: UIView, PinEntryViewType {
+public class DigitEntryView: UIView, PinFieldViewable {
 
     public var digitValue: Int? {
         didSet {
