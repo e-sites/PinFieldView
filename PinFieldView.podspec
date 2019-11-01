@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name           = "PinEntryView"
+  s.name           = "PinFieldView"
   s.platform       = :ios
   s.version        = "1.0.0"
   s.ios.deployment_target = "11.0"
