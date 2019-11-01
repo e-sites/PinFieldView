@@ -1,6 +1,6 @@
 //
 //  DefaultEntryType.swift
-//  PinEntryView
+//  PinFieldView
 //
 //  Created by Bas van Kuijck on 31/10/2019.
 //  Copyright © 2019 E-sites. All rights reserved.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class DefaultEntryType: UILabel, PinEntryViewType {
+public class DefaultEntryType: UILabel, PinFieldViewable {
 
     public var digitValue: Int? {
         didSet {

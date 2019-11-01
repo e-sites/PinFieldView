@@ -1,6 +1,6 @@
 //
-//  PinEntryView.swift
-//  PinEntryView
+//  PinFieldView.swift
+//  PinFieldView
 //
 //  Created by Bas van Kuijck on 31/10/2019.
 //  Copyright © 2019 E-sites. All rights reserved.
@@ -10,7 +10,9 @@ import Foundation
 import UIKit
 
 @IBDesignable
-public class PinEntryView: UIControl, UIKeyInput, UITextInputTraits {
+public class PinFieldView: UIControl, UIKeyInput, UITextInputTraits {
+
+    public typealias PinEntryTypeUIView = (UIView & PinFieldViewable)
 
     /// How should the pin entry views be sized?
     public enum SizeBehavior {
@@ -21,8 +23,6 @@ public class PinEntryView: UIControl, UIKeyInput, UITextInputTraits {
         /// Fixed width, dynamic spacing
         case fixedWidth(CGFloat)
     }
-
-    public typealias PinEntryTypeUIView = (UIView & PinEntryViewType)
 
     /// The actual pincode
     private(set) public var value: String = "" {
@@ -74,7 +74,6 @@ public class PinEntryView: UIControl, UIKeyInput, UITextInputTraits {
 
     // MARK: - IBInspectable
     // --------------------------------------------------------
-
 
     /// How many digits can it hold?
     /// Minimum: 1

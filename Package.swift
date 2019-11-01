@@ -2,18 +2,18 @@
 import PackageDescription
 
 let package = Package(
-    name: "PinEntryView",
+    name: "PinFieldView",
     platforms: [
         .iOS(.v11),
     ],
     products: [
-        .library(name: "PinEntryView", targets: ["PinEntryView"])
+        .library(name: "PinFieldView", targets: ["PinFieldView"])
     ],
     dependencies: [
     ],
     targets: [
         .target(
-            name: "PinEntryView",
+            name: "PinFieldView",
             dependencies: [
             ],
             path: "Sources"

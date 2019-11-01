@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import PinEntryView
+import PinFieldView
 
 class ViewController: UIViewController {
-    @IBOutlet private weak var pinEntryView: PinEntryView!
+    @IBOutlet private weak var pinEntryView: PinFieldView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

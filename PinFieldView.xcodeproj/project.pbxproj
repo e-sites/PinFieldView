@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C3094588236B0E210043FF3C /* PinEntryView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C309457E236B0E210043FF3C /* PinEntryView.framework */; };
+		C3094588236B0E210043FF3C /* PinFieldView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C309457E236B0E210043FF3C /* PinFieldView.framework */; };
 		C309458D236B0E210043FF3C /* PinEntryViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C309458C236B0E210043FF3C /* PinEntryViewTests.swift */; };
 		C309459F236B0E410043FF3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C309459E236B0E410043FF3C /* AppDelegate.swift */; };
 		C30945A3236B0E410043FF3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30945A2236B0E410043FF3C /* ViewController.swift */; };
 		C30945A8236B0E440043FF3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C30945A7236B0E440043FF3C /* Assets.xcassets */; };
 		C30945AB236B0E440043FF3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C30945A9236B0E440043FF3C /* LaunchScreen.storyboard */; };
-		C30945B8236B13AF0043FF3C /* PinEntryView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C309457E236B0E210043FF3C /* PinEntryView.framework */; };
-		C30945B9236B13AF0043FF3C /* PinEntryView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C309457E236B0E210043FF3C /* PinEntryView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C30945B8236B13AF0043FF3C /* PinFieldView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C309457E236B0E210043FF3C /* PinFieldView.framework */; };
+		C30945B9236B13AF0043FF3C /* PinFieldView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C309457E236B0E210043FF3C /* PinFieldView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C30945CA236B261A0043FF3C /* Clamping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30945C4236B261A0043FF3C /* Clamping.swift */; };
-		C30945CB236B261A0043FF3C /* PinEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30945C5236B261A0043FF3C /* PinEntryView.swift */; };
+		C30945CB236B261A0043FF3C /* PinFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30945C5236B261A0043FF3C /* PinFieldView.swift */; };
 		C30945CC236B261A0043FF3C /* DefaultEntryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30945C6236B261A0043FF3C /* DefaultEntryType.swift */; };
-		C30945CE236B261A0043FF3C /* PinEntryView.h in Headers */ = {isa = PBXBuildFile; fileRef = C30945C8236B261A0043FF3C /* PinEntryView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C30945CF236B261A0043FF3C /* PinEntryViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30945C9236B261A0043FF3C /* PinEntryViewType.swift */; };
+		C30945CE236B261A0043FF3C /* PinFieldView.h in Headers */ = {isa = PBXBuildFile; fileRef = C30945C8236B261A0043FF3C /* PinFieldView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C30945CF236B261A0043FF3C /* PinFieldViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30945C9236B261A0043FF3C /* PinFieldViewable.swift */; };
 		C30945D2236B2D880043FF3C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C30945D1236B2D880043FF3C /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +47,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C30945B9236B13AF0043FF3C /* PinEntryView.framework in Embed Frameworks */,
+				C30945B9236B13AF0043FF3C /* PinFieldView.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,8 +55,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C309457E236B0E210043FF3C /* PinEntryView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PinEntryView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3094587236B0E210043FF3C /* PinEntryViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinEntryViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C309457E236B0E210043FF3C /* PinFieldView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PinFieldView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3094587236B0E210043FF3C /* PinFieldViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinFieldViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C309458C236B0E210043FF3C /* PinEntryViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinEntryViewTests.swift; sourceTree = "<group>"; };
 		C309458E236B0E210043FF3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C309459C236B0E410043FF3C /* PinEntryExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinEntryExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,11 +66,11 @@
 		C30945AA236B0E440043FF3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C30945AC236B0E440043FF3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C30945C4236B261A0043FF3C /* Clamping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clamping.swift; sourceTree = "<group>"; };
-		C30945C5236B261A0043FF3C /* PinEntryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinEntryView.swift; sourceTree = "<group>"; };
+		C30945C5236B261A0043FF3C /* PinFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinFieldView.swift; sourceTree = "<group>"; };
 		C30945C6236B261A0043FF3C /* DefaultEntryType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultEntryType.swift; sourceTree = "<group>"; };
 		C30945C7236B261A0043FF3C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C30945C8236B261A0043FF3C /* PinEntryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinEntryView.h; sourceTree = "<group>"; };
-		C30945C9236B261A0043FF3C /* PinEntryViewType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinEntryViewType.swift; sourceTree = "<group>"; };
+		C30945C8236B261A0043FF3C /* PinFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinFieldView.h; sourceTree = "<group>"; };
+		C30945C9236B261A0043FF3C /* PinFieldViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinFieldViewable.swift; sourceTree = "<group>"; };
 		C30945D1236B2D880043FF3C /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3094588236B0E210043FF3C /* PinEntryView.framework in Frameworks */,
+				C3094588236B0E210043FF3C /* PinFieldView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C30945B8236B13AF0043FF3C /* PinEntryView.framework in Frameworks */,
+				C30945B8236B13AF0043FF3C /* PinFieldView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,8 +115,8 @@
 		C309457F236B0E210043FF3C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C309457E236B0E210043FF3C /* PinEntryView.framework */,
-				C3094587236B0E210043FF3C /* PinEntryViewTests.xctest */,
+				C309457E236B0E210043FF3C /* PinFieldView.framework */,
+				C3094587236B0E210043FF3C /* PinFieldViewTests.xctest */,
 				C309459C236B0E410043FF3C /* PinEntryExample.app */,
 			);
 			name = Products;
@@ -156,10 +156,10 @@
 			children = (
 				C30945C7236B261A0043FF3C /* Info.plist */,
 				C30945C3236B261A0043FF3C /* PropertyWrappers */,
-				C30945C5236B261A0043FF3C /* PinEntryView.swift */,
+				C30945C5236B261A0043FF3C /* PinFieldView.swift */,
 				C30945C6236B261A0043FF3C /* DefaultEntryType.swift */,
-				C30945C8236B261A0043FF3C /* PinEntryView.h */,
-				C30945C9236B261A0043FF3C /* PinEntryViewType.swift */,
+				C30945C9236B261A0043FF3C /* PinFieldViewable.swift */,
+				C30945C8236B261A0043FF3C /* PinFieldView.h */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -179,16 +179,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C30945CE236B261A0043FF3C /* PinEntryView.h in Headers */,
+				C30945CE236B261A0043FF3C /* PinFieldView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C309457D236B0E210043FF3C /* PinEntryView */ = {
+		C309457D236B0E210043FF3C /* PinFieldView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C3094592236B0E210043FF3C /* Build configuration list for PBXNativeTarget "PinEntryView" */;
+			buildConfigurationList = C3094592236B0E210043FF3C /* Build configuration list for PBXNativeTarget "PinFieldView" */;
 			buildPhases = (
 				C3094579236B0E210043FF3C /* Headers */,
 				C309457A236B0E210043FF3C /* Sources */,
@@ -199,14 +199,14 @@
 			);
 			dependencies = (
 			);
-			name = PinEntryView;
+			name = PinFieldView;
 			productName = PinEntryView;
-			productReference = C309457E236B0E210043FF3C /* PinEntryView.framework */;
+			productReference = C309457E236B0E210043FF3C /* PinFieldView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C3094586236B0E210043FF3C /* PinEntryViewTests */ = {
+		C3094586236B0E210043FF3C /* PinFieldViewTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C3094595236B0E210043FF3C /* Build configuration list for PBXNativeTarget "PinEntryViewTests" */;
+			buildConfigurationList = C3094595236B0E210043FF3C /* Build configuration list for PBXNativeTarget "PinFieldViewTests" */;
 			buildPhases = (
 				C3094583236B0E210043FF3C /* Sources */,
 				C3094584236B0E210043FF3C /* Frameworks */,
@@ -217,9 +217,9 @@
 			dependencies = (
 				C309458A236B0E210043FF3C /* PBXTargetDependency */,
 			);
-			name = PinEntryViewTests;
+			name = PinFieldViewTests;
 			productName = PinEntryViewTests;
-			productReference = C3094587236B0E210043FF3C /* PinEntryViewTests.xctest */;
+			productReference = C3094587236B0E210043FF3C /* PinFieldViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		C309459B236B0E410043FF3C /* PinEntryExample */ = {
@@ -263,7 +263,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C3094578236B0E210043FF3C /* Build configuration list for PBXProject "PinEntryView" */;
+			buildConfigurationList = C3094578236B0E210043FF3C /* Build configuration list for PBXProject "PinFieldView" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -276,8 +276,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C309457D236B0E210043FF3C /* PinEntryView */,
-				C3094586236B0E210043FF3C /* PinEntryViewTests */,
+				C309457D236B0E210043FF3C /* PinFieldView */,
+				C3094586236B0E210043FF3C /* PinFieldViewTests */,
 				C309459B236B0E410043FF3C /* PinEntryExample */,
 			);
 		};
@@ -317,8 +317,8 @@
 			files = (
 				C30945CA236B261A0043FF3C /* Clamping.swift in Sources */,
 				C30945CC236B261A0043FF3C /* DefaultEntryType.swift in Sources */,
-				C30945CB236B261A0043FF3C /* PinEntryView.swift in Sources */,
-				C30945CF236B261A0043FF3C /* PinEntryViewType.swift in Sources */,
+				C30945CB236B261A0043FF3C /* PinFieldView.swift in Sources */,
+				C30945CF236B261A0043FF3C /* PinFieldViewable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,12 +344,12 @@
 /* Begin PBXTargetDependency section */
 		C309458A236B0E210043FF3C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C309457D236B0E210043FF3C /* PinEntryView */;
+			target = C309457D236B0E210043FF3C /* PinFieldView */;
 			targetProxy = C3094589236B0E210043FF3C /* PBXContainerItemProxy */;
 		};
 		C30945BB236B13AF0043FF3C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C309457D236B0E210043FF3C /* PinEntryView */;
+			target = C309457D236B0E210043FF3C /* PinFieldView */;
 			targetProxy = C30945BA236B13AF0043FF3C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -612,7 +612,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C3094578236B0E210043FF3C /* Build configuration list for PBXProject "PinEntryView" */ = {
+		C3094578236B0E210043FF3C /* Build configuration list for PBXProject "PinFieldView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3094590236B0E210043FF3C /* Debug */,
@@ -621,7 +621,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C3094592236B0E210043FF3C /* Build configuration list for PBXNativeTarget "PinEntryView" */ = {
+		C3094592236B0E210043FF3C /* Build configuration list for PBXNativeTarget "PinFieldView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3094593236B0E210043FF3C /* Debug */,
@@ -630,7 +630,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C3094595236B0E210043FF3C /* Build configuration list for PBXNativeTarget "PinEntryViewTests" */ = {
+		C3094595236B0E210043FF3C /* Build configuration list for PBXNativeTarget "PinFieldViewTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3094596236B0E210043FF3C /* Debug */,
