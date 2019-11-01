@@ -12,7 +12,7 @@ import UIKit
 @IBDesignable
 public class PinFieldView: UIControl, UIKeyInput, UITextInputTraits {
 
-    public typealias PinEntryTypeUIView = (UIView & PinFieldViewable)
+    public typealias PinFieldUIView = (UIView & PinFieldViewable)
 
     /// How should the pin entry views be sized?
     public enum SizeBehavior {
@@ -34,7 +34,7 @@ public class PinFieldView: UIControl, UIKeyInput, UITextInputTraits {
     private var _stackView = UIStackView()
 
     /// If (for some reason) you want to do stuff with the individual entry views
-    private(set) public var views: [PinEntryTypeUIView] = []
+    private(set) public var views: [PinFieldUIView] = []
 
 
     /// Is it filled in completely?
@@ -89,9 +89,9 @@ public class PinFieldView: UIControl, UIKeyInput, UITextInputTraits {
         }
     }
 
-    /// The PinEntryTypeUIView to use
-    /// Make sure yout `UIView` implements the `PinEntryTypeUIView` protocol
-    public var viewType: PinEntryTypeUIView.Type = DefaultEntryType.self {
+    /// The PinFieldUIView to use
+    /// Make sure yout `UIView` implements the `PinFieldUIView` protocol
+    public var viewType: PinFieldUIView.Type = DefaultEntryType.self {
         didSet {
             _updateLayout()
         }

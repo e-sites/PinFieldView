@@ -39,7 +39,7 @@ Add the following line to your dependencies:
 You can either add your `PinFieldView` to a XIB or storyboard or you can add it programatically:
 
 ```swift
-import PinEntryType
+import PinFieldView
 import UIKit
 
 let entryView = PinFieldView(frame: CGRect(x: 10, y: 10, width: 300, height: 64))
