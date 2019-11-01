@@ -87,18 +87,18 @@ class EntryView: UILabel, PinFieldViewable {
 
 |Variable|Distinction|Description|
 |----|----|-------|
-|`value: String`|`{ get }`|Returns the typed pincode (e.g. "12345")|
-|`views: [PinEntryTypeUIView]`|`{ get }`|The current entry item views, so you can use them as you like|
-|`isFilled: Bool`|`{ get }`|Are all the entry fields filled in?|
-|`sizeBehavior: SizeBehavior`|`{ get set }`|[See size behavior](#sizebehavior) (Default: `.spacing(10)`|
-|`digits: Int`|`{ get set }`|The number of digits (Default: 4, Min: 1, Max: 10)|
-|`viewType: PinEntryTypeUIView.Type`|`{ get set }`|[See view types](#viewtype) (Default: `DefaultEntryType.self`)|
+|`value: String`|`get`|Returns the typed pincode (e.g. "12345")|
+|`views: [PinEntryTypeUIView]`|`get`|The current entry item views, so you can use them as you like|
+|`isFilled: Bool`|`get`|Are all the entry fields filled in?|
+|`sizeBehavior: SizeBehavior`|`get, set`|[See size behavior](#sizebehavior) (Default: `.spacing(10)`|
+|`digits: Int`|`get, set`|The number of digits (Default: 4, Min: 1, Max: 10)|
+|`viewType: PinEntryTypeUIView.Type`|`get, set`|[See view types](#viewtype) (Default: `DefaultEntryType.self`)|
 
 
 ### Functions
 
 |Function|Description|
-|----|----|-------|
+|----|--------|
 |`func clear()`|Clears all the entry fields|
 
 ## Configuration
