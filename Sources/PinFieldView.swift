@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 @IBDesignable
-public class PinFieldView: UIControl, UIKeyInput, UITextInputTraits {
+open class PinFieldView: UIControl, UIKeyInput, UITextInputTraits {
 
     public typealias PinFieldUIView = (UIView & PinFieldViewable)
 

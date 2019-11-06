@@ -1,5 +1,8 @@
 # Changelog PinEntryView
 
+## v1.1.1 (06-11-2019)
+- Make class open
+
 ## v1.1.0 (01-11-2019)
 - Use `PinFieldViewable` instead
 
