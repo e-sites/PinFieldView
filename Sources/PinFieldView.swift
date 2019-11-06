@@ -9,7 +9,11 @@
 import Foundation
 import UIKit
 
-@IBDesignable
+public protocol PinFieldViewDelegate: class {
+    func pinFieldViewDidBeginEditing(_ pinFieldView: PinFieldView)
+    func pinFieldViewDidEndEditing(_ pinFieldView: PinFieldView)
+}
+
 open class PinFieldView: UIControl, UIKeyInput, UITextInputTraits {
 
     public typealias PinFieldUIView = (UIView & PinFieldViewable)
@@ -23,6 +27,8 @@ open class PinFieldView: UIControl, UIKeyInput, UITextInputTraits {
         /// Fixed width, dynamic spacing
         case fixedWidth(CGFloat)
     }
+
+    public weak var delegate: PinFieldViewDelegate?
 
     /// The actual pincode
     private(set) public var value: String = "" {
@@ -229,6 +235,7 @@ open class PinFieldView: UIControl, UIKeyInput, UITextInputTraits {
         defer {
             _updateCursor()
         }
+        delegate?.pinFieldViewDidBeginEditing(self)
         return super.becomeFirstResponder()
     }
 
@@ -237,6 +244,7 @@ open class PinFieldView: UIControl, UIKeyInput, UITextInputTraits {
         defer {
             _updateCursor()
         }
+        delegate?.pinFieldViewDidEndEditing(self)
         return super.resignFirstResponder()
     }
 
