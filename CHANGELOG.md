@@ -1,5 +1,8 @@
 # Changelog PinEntryView
 
+## v1.1.4 (06-11-2019)
+- Removed @IBDesignable and added PinFieldViewDelegate
+
 ## v1.1.3 (06-11-2019)
 - open funcs
 
