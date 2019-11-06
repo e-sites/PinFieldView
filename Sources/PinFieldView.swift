@@ -196,7 +196,7 @@ open class PinFieldView: UIControl, UIKeyInput, UITextInputTraits {
         }
     }
 
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         if case SizeBehavior.fixedWidth = sizeBehavior {
             _updateSizeBehavior()
@@ -216,12 +216,12 @@ open class PinFieldView: UIControl, UIKeyInput, UITextInputTraits {
         becomeFirstResponder()
     }
 
-    override public var canBecomeFirstResponder: Bool {
+    override open var canBecomeFirstResponder: Bool {
         return true
     }
 
     @discardableResult
-    override public func becomeFirstResponder() -> Bool {
+    override open func becomeFirstResponder() -> Bool {
         // When this view becomes active and it's already filled in, reset it.
         if isFilled {
             clear()
@@ -233,7 +233,7 @@ open class PinFieldView: UIControl, UIKeyInput, UITextInputTraits {
     }
 
     @discardableResult
-    override public func resignFirstResponder() -> Bool {
+    override open func resignFirstResponder() -> Bool {
         defer {
             _updateCursor()
         }

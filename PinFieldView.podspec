@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name           = "PinFieldView"
   s.platform       = :ios
-  s.version        = "1.1.2"
+  s.version        = "1.1.3"
   s.ios.deployment_target = "11.0"
   s.summary        = "Entering PIN codes made easy"
   s.author         = { "Bas van Kuijck" => "bas@e-sites.nl" }

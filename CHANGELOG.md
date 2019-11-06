@@ -1,5 +1,8 @@
 # Changelog PinEntryView
 
+## v1.1.3 (06-11-2019)
+- open funcs
+
 ## v1.1.2 (06-11-2019)
 - Fixed required bug
 
