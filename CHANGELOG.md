@@ -1,5 +1,8 @@
 # Changelog PinEntryView
 
+## v1.1.2 (06-11-2019)
+- Fixed required bug
+
 ## v1.1.1 (06-11-2019)
 - Make class open
 
