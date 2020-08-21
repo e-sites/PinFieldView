@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "PinFieldView",
     platforms: [
-        .iOS(.v11),
+        .iOS(.v10),
     ],
     products: [
         .library(name: "PinFieldView", targets: ["PinFieldView"])

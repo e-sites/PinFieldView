@@ -1,5 +1,8 @@
 # Changelog PinEntryView
 
+## v1.1.5 (21-08-2020)
+- Minimum deployment target set to 10.0
+
 ## v1.1.4 (06-11-2019)
 - Removed @IBDesignable and added PinFieldViewDelegate
 
