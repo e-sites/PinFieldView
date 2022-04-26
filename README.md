@@ -87,7 +87,7 @@ class EntryView: UILabel, PinFieldViewable {
 
 |Variable|Type|Description|
 |----|---|----|
-|`value`|`String`|(Readonly) Returns the typed pincode (e.g. "12345")|
+|`value`|`String`|Returns or sets the typed pincode (e.g. "12345")|
 |`views`|`[PinFieldUIView]`|(Readonly) The current entry item views, so you can use them as you like|
 |`isFilled`|`Bool`|(Readonly) Are all the entry fields filled in?|
 |`digits`|`Int`|The number of digits (Default: 4, Min: 1, Max: 10)|

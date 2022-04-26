@@ -21,6 +21,12 @@ class ViewController: UIViewController {
         pinEntryView3.sizeBehavior = .spacing(20)
         pinEntryView3.viewType = EmojiEntryType.self
     }
+    
+    @IBAction func tapClearAll() {
+        pinEntryView1.clear()
+        pinEntryView2.value = ""
+        pinEntryView3.value = "12"
+    }
 }
 
 public class EmojiEntryType: UILabel, PinFieldViewable {

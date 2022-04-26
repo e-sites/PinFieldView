@@ -1,5 +1,8 @@
 # Changelog PinEntryView
 
+## v1.2.1 (26-04-2022)
+- Make `value` settable
+
 ## v1.2.0 (26-04-2022)
 - Added `pinFieldViewDidUpdate(_:value:)` delegate
 

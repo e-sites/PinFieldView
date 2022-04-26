@@ -32,7 +32,7 @@ open class PinFieldView: UIControl, UIKeyInput, UITextInputTraits {
     public weak var delegate: PinFieldViewDelegate?
 
     /// The actual pincode
-    private(set) public var value: String = "" {
+    public var value: String = "" {
         didSet {
             delegate?.pinFieldViewDidUpdate(self, value: value)
             _updateCursor(oldValue: oldValue)

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,40 +23,53 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="wki-Im-6pq">
-                    <rect key="frame" x="50" y="94" width="314" height="252"/>
+                    <rect key="frame" x="50" y="94" width="314" height="313"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcc-S0-A1B" customClass="PinFieldView" customModule="PinFieldView">
                             <rect key="frame" x="0.0" y="0.0" width="314" height="64"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="64" id="Mxz-LU-oiF"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDb-ix-cvm" customClass="PinFieldView" customModule="PinFieldView">
                             <rect key="frame" x="0.0" y="94" width="314" height="64"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="64" id="Zce-3C-nJB"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="txO-RK-4F6" customClass="PinFieldView" customModule="PinFieldView">
                             <rect key="frame" x="0.0" y="188" width="314" height="64"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="64" id="dEi-Om-fdv"/>
                             </constraints>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqW-3Q-eM7">
+                            <rect key="frame" x="0.0" y="282" width="314" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Clear some / partially"/>
+                            <connections>
+                                <action selector="tapClearAll" destination="-1" eventType="touchUpInside" id="8bX-JB-0WX"/>
+                            </connections>
+                        </button>
                     </subviews>
                 </stackView>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="RRc-rG-q5B"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="RRc-rG-q5B" firstAttribute="trailing" secondItem="wki-Im-6pq" secondAttribute="trailing" constant="50" id="Tqh-MB-WYG"/>
                 <constraint firstItem="wki-Im-6pq" firstAttribute="leading" secondItem="RRc-rG-q5B" secondAttribute="leading" constant="50" id="Yy8-5z-yUM"/>
                 <constraint firstItem="wki-Im-6pq" firstAttribute="top" secondItem="RRc-rG-q5B" secondAttribute="top" constant="50" id="hrx-zX-eB7"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="RRc-rG-q5B"/>
             <point key="canvasLocation" x="132" y="154"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
