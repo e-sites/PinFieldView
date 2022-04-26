@@ -1,5 +1,8 @@
 # Changelog PinEntryView
 
+## v1.2.0 (26-04-2022)
+- Added `pinFieldViewDidUpdate(_:value:)` delegate
+
 ## v1.1.5 (21-08-2020)
 - Minimum deployment target set to 10.0
 

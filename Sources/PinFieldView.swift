@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
-public protocol PinFieldViewDelegate: class {
+public protocol PinFieldViewDelegate: AnyObject {
     func pinFieldViewDidBeginEditing(_ pinFieldView: PinFieldView)
     func pinFieldViewDidEndEditing(_ pinFieldView: PinFieldView)
+    func pinFieldViewDidUpdate(_ pinFieldView: PinFieldView, value: String)
 }
 
 open class PinFieldView: UIControl, UIKeyInput, UITextInputTraits {
@@ -33,6 +34,7 @@ open class PinFieldView: UIControl, UIKeyInput, UITextInputTraits {
     /// The actual pincode
     private(set) public var value: String = "" {
         didSet {
+            delegate?.pinFieldViewDidUpdate(self, value: value)
             _updateCursor(oldValue: oldValue)
         }
     }
